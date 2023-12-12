@@ -1,14 +1,14 @@
-class QuestGame:
+class StudyQuestzGame:
     '''
-    This class represents the QuestLearn game, a gamified study app for academic triumph.
-    
+    This class represents the StudyQuestz flashcard game, gamifying learning.
+
     Attributes:
         flashcards(list): List to hold flashcard objects for the game.
     '''
 
     def __init__(self):
         '''
-        Initializes the QuestGame object with an empty list of flashcards.
+        Initializes the StudyQuestzGame object with an empty list of flashcards.
         '''
         self.flashcards = []
 
@@ -35,7 +35,7 @@ class QuestGame:
         '''
         Initiates the quiz and tracks user points.
         '''
-        print("\nWelcome to QuestLearn! Let's start the game.\n")
+        print("\nWelcome to StudyQuestz! Let's start the game.\n")
         self.input_flashcard()  # Add a flashcard for the user to study
         self.take_quiz()        # Start the quiz
         self.track_points()     # Track user points
@@ -44,5 +44,5 @@ class QuestGame:
 
 # Example usage
 if __name__ == "__main__":
-    quest_game = QuestGame()
-    quest_game.play_game()
+    study_questz_game = StudyQuestzGame()
+    study_questz_game.play_game()
