@@ -1,0 +1,48 @@
+class QuestGame:
+    '''
+    This class represents the QuestLearn game, a gamified study app for academic triumph.
+    
+    Attributes:
+        flashcards(list): List to hold flashcard objects for the game.
+    '''
+
+    def __init__(self):
+        '''
+        Initializes the QuestGame object with an empty list of flashcards.
+        '''
+        self.flashcards = []
+
+    def add_flashcard(self, card, definition):
+        '''
+        Adds a new flashcard to the game.
+
+        Args:
+            card (str): The term for the flashcard.
+            definition (str): The definition for the flashcard.
+        '''
+        flashcard = Flashcard(card, definition)
+        self.flashcards.append(flashcard)
+
+    def input_flashcard(self):
+        '''
+        Takes user input to create a new flashcard and adds it to the game.
+        '''
+        card = input("Enter the term: ")
+        definition = input("Enter the definition: ")
+        self.add_flashcard(card, definition)
+
+    def play_game(self):
+        '''
+        Initiates the quiz and tracks user points.
+        '''
+        print("\nWelcome to QuestLearn! Let's start the game.\n")
+        self.input_flashcard()  # Add a flashcard for the user to study
+        self.take_quiz()        # Start the quiz
+        self.track_points()     # Track user points
+
+# Assuming you have the Flashcard class defined as per your original code
+
+# Example usage
+if __name__ == "__main__":
+    quest_game = QuestGame()
+    quest_game.play_game()
